@@ -7,8 +7,10 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+@Table(name = "feeds", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"user_id", "post_id"})
+})
 @Entity
-@Table(name = "feeds")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

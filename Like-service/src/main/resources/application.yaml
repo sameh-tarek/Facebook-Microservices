@@ -1,0 +1,15 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: LIKE-SERVICE
+  datasource:
+    url: "jdbc:mysql://localhost:3306/like_db"
+    username: facebook
+    password: facebook
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
