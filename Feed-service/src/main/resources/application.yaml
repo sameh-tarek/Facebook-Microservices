@@ -1,0 +1,17 @@
+server:
+  port: 6000
+
+spring:
+  application:
+    name: FEED-SERVICE
+  datasource:
+    url: "jdbc:mysql://localhost:3306/feed_db"
+    username: facebook
+    password: facebook
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
