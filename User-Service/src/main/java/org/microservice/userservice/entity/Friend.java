@@ -35,4 +35,10 @@ public class Friend {
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
+
+    public Friend(User user, User friendUser, FriendshipStatus status) {
+        this.user = user;
+        this.friendUser = friendUser;
+        this.status = status;
+    }
 }
