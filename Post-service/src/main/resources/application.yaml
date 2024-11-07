@@ -1,6 +1,7 @@
 server:
   port: 7000
-
+  servlet:
+    context-path: /post
 spring:
   application:
     name: POST-SERVICE
@@ -14,4 +15,7 @@ spring:
       ddl-auto: update
     show-sql: true
 
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
