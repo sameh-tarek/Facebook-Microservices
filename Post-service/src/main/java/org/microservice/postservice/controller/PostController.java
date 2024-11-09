@@ -43,4 +43,9 @@ public class PostController {
     public List<PostResponseDTO> getAllUserPosts (@PathVariable Long userId) {
         return postService.getAllUserPosts(userId);
     }
+
+    @GetMapping("{id}/existing")
+    public boolean checkPostIsExist (@PathVariable Long id) {
+        return postService.checkPostIsExist(id);
+    }
 }

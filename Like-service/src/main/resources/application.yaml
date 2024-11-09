@@ -1,6 +1,7 @@
 server:
   port: 5000
-
+  servlet:
+    context-path: /like
 spring:
   application:
     name: LIKE-SERVICE
@@ -13,3 +14,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

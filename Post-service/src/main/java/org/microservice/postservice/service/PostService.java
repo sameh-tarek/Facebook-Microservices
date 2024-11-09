@@ -15,4 +15,6 @@ public interface PostService {
     void deletePost(Long id);
 
     List<PostResponseDTO> getAllUserPosts(Long userId);
+
+    boolean checkPostIsExist(Long id);
 }

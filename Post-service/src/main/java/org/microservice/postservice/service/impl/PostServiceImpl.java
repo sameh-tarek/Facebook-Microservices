@@ -23,6 +23,7 @@ public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
     private final PostMapper postMapper;
     private final UserProxy userProxy;
+
     @Override
     public PostResponseDTO createPost(PostRequestDTO post) {
         Long userId = post.getUserId();
@@ -81,5 +82,10 @@ public class PostServiceImpl implements PostService {
         List<Post> userPosts = postRepository.findByUserId(userId);
         log.trace("All user with id: {} posts : {}", userId, userPosts);
         return postMapper.toDTOs(userPosts);
+    }
+
+    @Override
+    public boolean checkPostIsExist(Long id) {
+        return postRepository.existsPostsByPostId(id);
     }
 }
